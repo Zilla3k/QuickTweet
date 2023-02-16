@@ -1,0 +1,13 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  /* Duas colunas, uma fixa com 256 (Profile Info) e outra livre */
+  grid-template-columns: 256px 1fr;
+  /* Espaco entre o profile e os posts */
+  gap: 2rem;
+  /* itens sempre alinhados ao topo */
+  align-items: flex-start;
+}
