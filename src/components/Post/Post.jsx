@@ -34,6 +34,16 @@ export function Post() {
           <a href="">#doctorcare</a>
         </p>
       </div>
+
+      <form className={styles.formComment}>
+        <strong>Deixe seu comentario</strong>
+
+        <textarea placeholder="Nossa, ficou incriv|" />
+
+        <div>
+          <button type="submit">Comentar</button>
+        </div>
+      </form>
     </article>
   );
 }
