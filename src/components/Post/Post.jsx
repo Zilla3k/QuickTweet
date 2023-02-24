@@ -29,7 +29,12 @@ export function Post({ author, publishedAt, content }) {
   }
 
   function newCommentChange() {
+    event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
+  }
+
+  function newCommentInvalid() {
+    event.target.setCustomValidity('Preencha o campo para comentar! :)');
   }
 
   function deleteComment(commentToDelete) {
@@ -38,6 +43,8 @@ export function Post({ author, publishedAt, content }) {
     });
     setComments(commentsWithoutDeletedOne);
   }
+
+  const isNewCommentEmpty = newCommentText.length === 0;
 
   return (
     <article className={styles.post}>
@@ -80,10 +87,14 @@ export function Post({ author, publishedAt, content }) {
           placeholder="Nossa, ficou incriv|"
           value={newCommentText}
           onChange={newCommentChange}
+          onInvalid={newCommentInvalid}
+          required
         />
 
         <div>
-          <button type="submit">Comentar</button>
+          <button type="submit" disabled={isNewCommentEmpty}>
+            Comentar
+          </button>
         </div>
       </form>
 
