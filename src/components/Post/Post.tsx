@@ -1,12 +1,29 @@
+import { ChangeEvent, EventHandler, FormEvent, InvalidEvent, useState } from 'react';
 import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { Avatar } from '../Avatar/Avatar';
 
 import styles from './Post.module.css';
 import { Comment } from '../Comment/Comment';
-import { useState } from 'react';
 
-export function Post({ author, publishedAt, content }) {
+interface Author {
+  name: string;
+  role: string;
+  avatarUrl: string;
+}
+
+interface Content {
+  type: 'paragraph' | 'link';
+  content: string;
+}
+
+interface PostProps {
+  author: Author;
+  publishedAt: Date;
+  content: Content[];
+}
+
+export function Post({ author, publishedAt, content } : PostProps) {
   const [comments, setComments] = useState([
     'Post muito interessante, poste mais!',
   ]);
@@ -22,22 +39,22 @@ export function Post({ author, publishedAt, content }) {
     addSuffix: true,
   });
 
-  function createNewComment() {
+  function createNewComment(event: FormEvent) {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText('');
   }
 
-  function newCommentChange() {
+  function newCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity('');
     setNewCommentText(event.target.value);
   }
 
-  function newCommentInvalid() {
+  function newCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity('Preencha o campo para comentar! :)');
   }
 
-  function deleteComment(commentToDelete) {
+  function deleteComment(commentToDelete: string) {
     const commentsWithoutDeletedOne = comments.filter((comment) => {
       return comment !== commentToDelete;
     });

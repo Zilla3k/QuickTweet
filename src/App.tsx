@@ -23,25 +23,7 @@ const posts = [
       { type: 'link', content: '👉 henrique.design/doctorcare' },
     ],
     publishedAt: new Date('2023-02-16 20:00:00'),
-  },
-  {
-    id: 2,
-    author: {
-      avatarUrl: 'https://github.com/diego3g.png',
-      name: 'Diego Fernandes',
-      role: 'CTO @Rocketseat',
-    },
-    content: [
-      { type: 'paragraph', content: 'Fala galeraa 👋' },
-      {
-        type: 'paragraph',
-        content:
-          'Acabei de subir mais um projeto no meu portifolio. O nome do projeto é DoctorCare 🚀',
-      },
-      { type: 'link', content: '👉 henrique.design/doctorcare' },
-    ],
-    publishedAt: new Date('2023-02-21 22:30:00'),
-  },
+  }
 ];
 
 export default function App() {
