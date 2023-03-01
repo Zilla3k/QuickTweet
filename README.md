@@ -50,7 +50,7 @@ git clone https://github.com/Zilla3k/QuickTweet.git
 cd QuickTweet
 
 # Instale as dependências
-yarn install ou npm
+yarn install ou npm install
 
 # Rode a aplicação
 yarn dev ou npm run dev
