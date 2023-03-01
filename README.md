@@ -20,7 +20,7 @@
 
 ## Sobre o Quick Tweet
 
-O My Money é um app simples e demonstrativo, de uma rede social simples, no qual voce pode adicionar posts, comentar nos posts de usuarios, curtir, comentar e remover comentarios feitos por voce.
+O Quick Tweet é um app simples e demonstrativo, de uma rede social simples, no qual voce pode adicionar posts, comentar nos posts de usuarios, curtir, comentar e remover comentarios feitos por voce.
 
 <br>
 
