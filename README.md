@@ -2,8 +2,8 @@
 
 <p>
   <img src="https://img.shields.io/badge/made%20by-HENRIQUE%20PELANDA-ff512f?style=flat-square">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/zilla3k/mymoneyapp?color=ff512f&style=flat-square">
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/zilla3k/mymoneyapp?color=ff512f&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/zilla3k/QuickTweet?color=ff512f&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/zilla3k/QuickTweet?color=ff512f&style=flat-square">
 </p>
 
 <img align="right" src="/src/assets/logo.svg " width="35%" alt="quick tweet">
